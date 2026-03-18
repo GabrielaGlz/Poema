@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.spacer{
+    height: 100vh;
+}
+
+.poem-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.poem-wrapper{
+    width:min(900px, 100%);
+}
+
+.poem-title{
+    margin: 0 0 3rem 0;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.poem-line{
+    position: relative;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.poem-text{
+    display: block;
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+    line-height: 1.6;
+    /*letter-spacing:0.01 em;  referente al contenedor padre*/
+}
+
+.poem-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: translateX(0%);
+    will-change: transform;
+}
